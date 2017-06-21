@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+#uls li{
+
+display: inline-block;
+padding: 5px;
+margin:5px;
+color: #fff;
+background-color: #cd4a48;
+font-size: 20px;
+text-align: center;
+cursor: pointer;
+}
+</style>
+</head>
+<body>
+	<input type="text" id="txt">
+	<button id="leftRe">左侧入</button>
+	<button id="rightre">右侧入</button>
+	<button id="leftCo">左侧出</button>
+	<button id="rightCo">右侧出</button>
+	<button id="clr">全部清空</button>
+	<ul id="uls">
+    
+	</ul>
+<script>
+
+var leftru=document.getElementById('leftRe');
+var rightru=document.getElementById('rightre');
+var leftchu=document.getElementById('leftCo');
+var rightchu=document.getElementById('rightCo');
+var txt=document.getElementById('txt');
+var ul=document.getElementById('uls');
+var clr=document.getElementById('clr');
+function add(direction){
+   if (txt.value=="")
+   {
+      alert("请输入数值!");
+      txt.focus();
+
+   }
+   else{
+   
+  
+   	if (direction=='left') {
+     var li=document.createElement("li");
+     li.innerHTML=txt.value;
+     ul.insertBefore(li,ul.firstChild)
+    }
+    else{
+     var li=document.createElement("li");
+     li.innerHTML=txt.value;
+     ul.appendChild(li);
+    }
+ }
+}
+
+function del(direction){
+if (ul.childNodes.length<=0) {
+
+alert("不存在子元素可以删除!");
+return false;
+
+}
+if (direction=='left') {
+alert("删除的数字为"+ul.firstChild.innerHTML)
+ul.removeChild(ul.firstChild);
+return false;
+
+}
+else if (direction=='right') {}{
+alert("删除的数字为"+ul.lastChild.innerHTML)
+ul.removeChild(ul.lastChild)
+return false;
+}
+
+}
+
+
+ leftru.onclick=function(){add('left')}   
+ rightru.onclick=function(){add('right')}  
+ leftchu.onclick=function(){del('left')}
+  rightchu.onclick=function(){del('right')}     
+  ul.onclick=function(event){
+    var t=event.target;
+    if(t.nodeName.toLowerCase() =='li'){
+       alert("删除的名字为:"+ul.removeChild(t).innerHTML);
+    }
+  } 
+  clr.onclick=function(){
+  	if(ul.childNodes.length<=0){
+    alert("没有元素可以清除！");
+    return false;
+  	}
+   ul.innerHTML=""
+   alert("全部清空！");
+
+  } 
+</script>
+</body>
+</html>
