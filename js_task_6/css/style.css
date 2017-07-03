@@ -1,0 +1,13 @@
+*{margin: 0;padding:0;}
+body{height: 100%;display: flex;justify-content: center;
+	align-items: center;flex-flow: column;}
+.BST{margin:20px;width: 1000px;height: 500px;
+	border:2px solid #3355d0;;margin-top: 20px;position: relative;display: flex;
+	 justify-content: center;align-items: center;background-color: #fff}
+.second{width:50%;height:80%;margin: 20px;border:1px solid #3355d0;display: flex;
+	 justify-content: center;align-items: center;background-color: #fff}
+.third{width:50%;height:50%;margin: 20px;border:1px solid #3355d0;display: flex;
+	 justify-content: center;align-items: center;background-color: #fff}
+.forth{width:60%;height:40%;margin: 10px;border:1px solid #3355d0;;background-color: #fff}	 
+.control{margin: 10px auto;height: 80px;}
+.control input{height: 30px;width: 70px}
