@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/index.js"></script>
+</head>
+<body>
+ <div class="BST" id="root">
+   <span>中国</span>
+   <div class="second">
+    <span>华东</span>
+    <div class="third">
+     <span>浙江</span>
+    <div class="forth"> <span>温州</span></div>
+    </div>
+    <div class="third">
+     <span>福建</span>
+    <div class="forth"> <span>福州</span></div>
+    <div class="forth"> <span>泉州</span></div>
+    <div class="forth"> <span>厦门</span></div>
+    </div>
+   </div>
+
+   <div class="second">
+    <span>华南</span>
+    <div class="third">
+     <span>广东</span>
+    <div class="forth"> <span>广州</span></div>
+    <div class="forth"> <span>佛山</span></div>
+    <div class="forth"> <span>东莞</span></div>
+    <div class="forth"> <span>深圳</span></div>
+    </div>
+    <div class="third">
+     <span>广西</span>
+    <div class="forth"> <span>南宁</span></div>
+    <div class="forth"> <span>玉林</span></div>
+    <div class="forth"> <span>梧州</span></div>
+    </div>
+    </div>
+    </div>
+ <div class="control">
+<input type="button" value="先序遍历" id="preOrder" class="s">
+<input type="button" value="后序遍历" id="postOrder" class="s">
+<input type="text" placeholder="键入搜索内容" id="text1" width="200" height="70" class="txt">
+<input type="button" value="前序搜索" id="preOrdeSearch" class="s">
+<input type="button" value="后序搜索" id="postOrderSearch" class="s">
+<br>
+<br>
+<input type="button" value="删除" id="del" class="s">
+<input type="button" value="添加" id="add" class="s">
+<input type="text" placeholder="输入需要添加的内容" id="text2" width="200" height="70" class="txt">
+ </div>
+</body>
+</html>
